@@ -90,9 +90,12 @@ function connectDB() {
 
 		// 스키마 정의
 		UserSchema = mongoose.Schema({
-			id: String,
-			name: String,
-			password: String
+//			id: String,
+//			name: String,
+//			password: String
+			id:  {type:String,required: true,unique: true},
+			name:{type:String,required: true},
+			password  :{type:String,required: true}
 		});
 		console.log('UserSchema 정의함.');
 		
